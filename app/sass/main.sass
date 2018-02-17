@@ -12,9 +12,13 @@
 	padding: 0
 	box-sizing: border-box
 
+img
+	display: block
+
 .container
 	max-width: 1170px
 	width: 100%
+	height: 100%
 	padding: 0 20px
 	margin: 0 auto
 	border: 2px solid #000
@@ -41,6 +45,7 @@ body
 	background-color: #fff
 
 .navigation
+	height: 100%
 	display: flex
 	flex-direction: row
 	justify-content: space-around
@@ -53,8 +58,31 @@ body
 			a
 				color: #555
 				font-weight: 600
+				transition: all .3s ease-in-out
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					bottom: -6px
+					left: 50%
+					width: 30px
+					height: 1px
+					background-color: $accent-color
+					transform: translateX(-50%) scale(0)
+					transition: all .3s ease-in-out
 				&:hover
 					color: $accent-color
+					&::after
+						transform: translateX(-50%) scale(1)
+	.logo
+		margin: auto 0
+		span
+			font-family: 'Champagne Limousines', sans-serif
+			font-size: 24px
+			display: block
+			color: $accent-color
+			margin-top: 8px
+
 	
 
 	
