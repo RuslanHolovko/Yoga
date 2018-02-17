@@ -27,7 +27,9 @@ gulp.task("scripts", function(){
 		"app/libs/jquery/dist/jquery.min.js",
 		"app/libs/owl.carousel/dist/owl.carousel.min.js",
 		"app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js",
-		"app/libs/jquery-nice-select/js/jquery.nice-select.min.js"
+		"app/libs/jquery-nice-select/js/jquery.nice-select.min.js",
+		"app/libs/sliphover/src/jquery.sliphover.min.js",
+		"app/libs/fancybox/dist/jquery.fancybox.min.js"
 		])
 
 	.pipe(concat("libs.min.js"))
