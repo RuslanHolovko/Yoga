@@ -774,6 +774,19 @@ img {
   margin: 0 auto;
   border: 2px solid #000; }
 
+.h3 {
+  font-family: 'Freestyle Script', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  font-weight: normal; }
+
+.h2 {
+  font-size: 30px;
+  color: #5b6ceb;
+  font-weight: 700; }
+
 li {
   list-style-type: none; }
 
@@ -970,10 +983,59 @@ body {
       font-size: 48px;
       color: #fff;
       line-height: 72px; }
-    .banner-content__right span {
-      font-family: 'Freestyle Script', sans-serif;
-      font-size: 40px;
-      margin-top: 18px;
-      line-height: 40px;
-      color: #fff;
-      display: block; }
+    .banner-content__right .h3 {
+      margin-top: 18px; }
+
+.programs {
+  padding: 125px 0;
+  background-color: #fff;
+  text-align: center; }
+  .programs .container {
+    padding: 0; }
+  .programs .h3 {
+    color: #777;
+    margin-top: 25px; }
+  .programs-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 77px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .programs-content .programs-item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.08);
+              box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.08);
+      width: 570px;
+      height: 300px;
+      -webkit-border-radius: 7px;
+              border-radius: 7px;
+      overflow: hidden;
+      margin-bottom: 25px; }
+      .programs-content .programs-item dl {
+        padding: 50px 30px;
+        text-align: left; }
+        .programs-content .programs-item dl dt {
+          font-size: 19px;
+          color: #777;
+          font-weight: 700;
+          text-transform: uppercase; }
+        .programs-content .programs-item dl dd {
+          line-height: 22px;
+          margin-top: 35px;
+          color: #555; }
+          .programs-content .programs-item dl dd span {
+            color: #999;
+            display: inline-block;
+            margin-top: 10px; }
+      .programs-content .programs-item img {
+        width: 270px; }
