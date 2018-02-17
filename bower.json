@@ -1,0 +1,10 @@
+{
+  "name": "yoga",
+  "description": "landing page",
+  "devDependencies": {
+    "owl.carousel": "^2.2.1",
+    "jquery-nice-select": "^1.1.0",
+    "page-scroll-to-id": "^1.5.8",
+    "normalize-css": "^8.0.0"
+  }
+}
