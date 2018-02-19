@@ -17,5 +17,24 @@ $(document).ready(function() {
   	$(this).parent().find(".cards-price").css({"background-color" : "#5b6ceb"});
   });
 
+  // slick-slider
+   $('.slider-for').slick({
+	   slidesToShow: 1,
+	   slidesToScroll: 1,
+	   arrows: false,
+	   dots: true,
+	   fade: false,
+	   asNavFor: '.slider-nav'
+	 });
+ $('.slider-nav').slick({
+	   slidesToShow: 1,
+	   slidesToScroll: 1,
+	   arrows: true,
+	   asNavFor: '.slider-for',
+	   dots: false,
+	   focusOnSelect: true
+	 });
+
+
 });
 // end document.ready 

@@ -6,6 +6,7 @@
     "jquery-nice-select": "^1.1.0",
     "page-scroll-to-id": "^1.5.8",
     "normalize-css": "^8.0.0",
-    "fancybox": "^3.2.5"
+    "fancybox": "^3.2.5",
+    "slick-carousel": "^1.8.1"
   }
 }
