@@ -7,7 +7,8 @@ $(document).ready(function() {
   $(".about-carousel").slick({
 	   slidesToShow: 1,
 	   slidesToScroll: 1,
-	   arrows: true
+	   arrows: true,
+	   adaptiveHeight: true
   });
 
   // hover effects on button
@@ -24,7 +25,8 @@ $(document).ready(function() {
 	   arrows: false,
 	   dots: true,
 	   fade: false,
-	   asNavFor: '.slider-nav'
+	   asNavFor: '.slider-nav',
+	   adaptiveHeight: true
 	 });
  $('.slider-nav').slick({
 	   slidesToShow: 1,
@@ -41,6 +43,7 @@ $(document).ready(function() {
  		highlightClass: "is-active",
  		offset: 99
  	});
+
 
  // SmoothScroll for websites v1.2.1
 // Licensed under the terms of the MIT license.
