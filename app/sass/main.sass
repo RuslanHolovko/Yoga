@@ -55,8 +55,13 @@ body
 	transition: all .3s ease
 
 .header
+	z-index: 100000
 	height: 100px
 	background-color: #fff
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
 	.container
 		padding: 0 110px
 
@@ -106,7 +111,7 @@ body
 
 			//Begin banner styles/////////////////////////////////////////////////////////////////////////////////////////
 .banner
-	padding: 100px 0
+	padding: 200px 0 100px
 	background-position: top center
 	background-size: cover
 	background-repeat: no-repeat
@@ -173,8 +178,8 @@ body
 			    display: block
 			    float: none
 			    font-weight: normal
-			    height: auto;
-			    line-height: initial;
+			    line-height: 14px;
+			    height: 46px
 			    outline: none
 			    position: relative;
 			    text-align: left !important
@@ -243,7 +248,7 @@ body
 						display: inline-block
 						margin-top: 10px
 			img
-				width: 270px
+				width: auto
 
 				// begin section gallery styles/////////////////////////////////////////////////////////////////
 
@@ -312,6 +317,8 @@ body
 		outline: none!important
 	.about-descr
 		padding-right: 133px
+		max-width: 600px
+		width: 100%
 		p
 			color: #555
 		.h2
@@ -638,7 +645,97 @@ body
 			&::before
 				display: none
 
+				// footer styles begin///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+.footer
+	padding-top: 100px
+	background-color: $accent-color
+	color: #fff
+	&-list
+		display: flex
+		letter-spacing: .4px
+		justify-content: space-between
+		.footer-about
+			 width: 40%
+			 .social-icons
+			 	margin: 70px 0 90px
+			 	a
+			 		display: inline-block
+			 		margin-left: 10px
+			 		&:first-child
+			 			margin-left: 0
+			 	i
+			 		display: inline-block
+			 		width: 24px
+			 		height: 24px
+			 		background: url(../img/css_sprites.png)
+		 		.instagram
+		 			background-position: -153px -136px
+		 		.google
+		 			background-position: -8px -181px
+		 		.pinterest
+		 			background-position: -49px -181px
+	 			.twitter
+	 				background-position: -200px -110px
+ 				.facebook
+ 					background-position: -116px -181px
+				
+		.footer-contact
+			flex: auto
+			padding-left: 135px
+			width: 65%
+			ul
+				display: flex
+				flex-wrap: wrap
+				flex-direction: row
+				li
+					width: 50%
+					margin-bottom: 25px
+					padding-right: 20px
+					i
+						background: url(../img/css_sprites.png)
+						width: 24px
+						height: 24px
+						display: block
+						float: left
+						margin: 6px 10px 0 0
+					.marker-map
+						background-position: -86px -181px
+					.mail
+						background-position: -154px -181px
+					.tel
+						background-position: -114px -136px
+					.site
+						background-position: -70px -136px
+					span
+						display: block
+
+		h4
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 58px
+	.sub-footer
+		padding: 40px 0
+		background-color: #5363d8
+		p
+			text-align: center
+			font-size: 16px
+			color: #b7bffc
+.is-active
+	color: $accent-color!important
+	&::after
+		content: ''
+		position: absolute
+		bottom: -6px
+		left: 50%
+		width: 30px
+		height: 1px
+		background-color: $accent-color
+		transform: translateX(-50%) scale(1)!important
+
+
+
+	
 
 
 

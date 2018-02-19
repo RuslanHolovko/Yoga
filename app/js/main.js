@@ -35,6 +35,13 @@ $(document).ready(function() {
 	   focusOnSelect: true
 	 });
 
+ // PageScrollToID Plugin
+ 	$("a").mPageScroll2id({
+ 		scrollSpeed: 900,
+ 		highlightClass: "is-active",
+ 		offset: 99
+ 	});
+
  // SmoothScroll for websites v1.2.1
 // Licensed under the terms of the MIT license.
 
