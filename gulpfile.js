@@ -25,7 +25,6 @@ gulp.task("sass", function(){
 gulp.task("scripts", function(){
 	return gulp.src([
 		"app/libs/jquery/dist/jquery.min.js",
-		"app/libs/owl.carousel/dist/owl.carousel.min.js",
 		"app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js",
 		"app/libs/jquery-nice-select/js/jquery.nice-select.min.js",
 		"app/libs/fancybox/dist/jquery.fancybox.min.js",

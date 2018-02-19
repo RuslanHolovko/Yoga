@@ -1,7 +1,5 @@
 @import "../libs/normalize-css/normalize"
 @import "../libs/jquery-nice-select/css/nice-select"
-@import "../libs/owl.carousel/dist/assets/owl.carousel.min"
-@import "../libs/owl.carousel/dist/assets/owl.theme.default.min"
 @import "../libs/fancybox/dist/jquery.fancybox.min"
 @import "../libs/slick-carousel/slick/slick.scss"
 @import "../libs/slick-carousel/slick/slick-theme.scss"
@@ -310,6 +308,8 @@ body
 		display: flex
 		flex-direction: row
 		padding: 0
+	.slick-initialized .slick-slide
+		outline: none!important
 	.about-descr
 		padding-right: 133px
 		p
@@ -323,8 +323,8 @@ body
 		>div
 			border-radius: 7px
 			overflow: hidden
-		.owl-prev,
-		.owl-next
+		.slick-prev,
+		.slick-next
 			z-index: 100
 			position: absolute
 			top: 50%
@@ -336,10 +336,12 @@ body
 			color: transparent
 			background: url(../img/css_sprites.png)
 			background-color: #fff
-		.owl-prev
+			&::before
+				display: none
+		.slick-prev
 			left: -25px
 			background-position: -231px -34px
-		.owl-next
+		.slick-next
 			right: -25px
 			background-position: -229px 6px
 			
