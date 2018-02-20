@@ -16,7 +16,7 @@ gulp.task("sass", function(){
 		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(sass().on("error",sass.logError))
 		.pipe(autoprefixer(["last 15 version", "> 1%", "ie 8", "ie 7"]))
-		// .pipe(cleancss())
+		.pipe(cleancss())
 		.pipe(rename({suffix: ".min"}))
 		.pipe(gulp.dest("app/css"))
 		.pipe(browserSync.stream());
