@@ -38,12 +38,12 @@ gulp.task("scripts", function(){
 
 gulp.task("img", function(){
 	return gulp.src("app/img/**/*")
-		.pipe(cache(imagemin({
+		.pipe(imagemin({
 			interlaced: true,
 			progressive: true,
 			optimizationLevel: 5,
 			svgoPlugins: [{removeViewBox: true}]
-		})))
+		}))
 		.pipe(gulp.dest("build/img"));
 });
 
@@ -61,7 +61,8 @@ gulp.task('serve', ["sass", "scripts"], function() {
 
 gulp.task("build", [ "img", "sass", "scripts"], function(){
 	var buildCss = gulp.src([
-			"app/css/main.min.css"
+			"app/css/main.min.css",
+			"app/css/ajax-loader.gif"
 		])
 	.pipe(gulp.dest("build/css"));
 
