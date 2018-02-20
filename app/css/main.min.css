@@ -1558,6 +1558,8 @@ body {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
+  .navigation .hamburger {
+    display: none; }
   .navigation .right-nav li:first-child,
   .navigation .left-nav li:first-child {
     margin-left: 0; }
@@ -1760,11 +1762,11 @@ body {
       overflow: hidden;
       margin-bottom: 25px; }
       .programs-content .programs-item .img-wrapper {
-        max-width: 270px; }
+        width: 270px; }
       .programs-content .programs-item dl {
         padding: 50px 30px;
         text-align: left;
-        width: 100%; }
+        width: 75%; }
         .programs-content .programs-item dl dt {
           font-size: 19px;
           color: #777;
@@ -2416,6 +2418,10 @@ body {
         -ms-transform: translateX(-50%) scale(1) !important;
             transform: translateX(-50%) scale(1) !important; }
 
+@media (max-width: 1404px) {
+  .trainer .slider-for .slick-dots {
+    right: -4%; } }
+
 @media (max-width: 1340px) {
   .shop .container {
     padding: 0 !important; }
@@ -2436,7 +2442,9 @@ body {
   .trainer-wrapper {
     padding-left: 0px !important; }
   .about .about-descr {
-    padding-right: 50px; } }
+    padding-right: 50px; }
+  .trainer .slider-for .slick-dots {
+    right: -8%; } }
 
 @media (max-width: 978px) {
   .footer-list .footer-contact ul {
@@ -2462,7 +2470,44 @@ body {
       .about .container .about-descr .h2 {
         text-align: center; }
     .about .container .about-carousel {
-      margin: 0 auto; } }
+      margin: 0 auto; }
+  .left-nav,
+  .right-nav {
+    display: none !important; }
+  .navigation {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .hamburger {
+    display: block !important;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    margin-left: auto;
+    position: relative;
+    z-index: 300000; }
+    .hamburger:hover {
+      cursor: pointer; }
+      .hamburger:hover:after {
+        -webkit-box-shadow: 0 10px 0 6px #fff, 0 20px 0 0px #2e43e5, 0 30px 0 6px #fff, 0 40px 0px 0px #2e43e5, 0 50px 0px 0px #fff;
+                box-shadow: 0 10px 0 6px #fff, 0 20px 0 0px #2e43e5, 0 30px 0 6px #fff, 0 40px 0px 0px #2e43e5, 0 50px 0px 0px #fff; }
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-box-shadow: 0 10px 0 6px #fff, 0 20px 0 0px #5b6ceb, 0 30px 0 6px #fff, 0 40px 0px 0px #5b6ceb, 0 50px 0px 0px #fff;
+              box-shadow: 0 10px 0 6px #fff, 0 20px 0 0px #5b6ceb, 0 30px 0 6px #fff, 0 40px 0px 0px #5b6ceb, 0 50px 0px 0px #fff;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; } }
 
 @media (max-width: 885px) {
   .gallery-block__item {
@@ -2525,7 +2570,18 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
   .trainer .slider-for-item .circle {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .about,
+  .programs {
+    padding: 80px 0; }
+  .elements {
+    padding: 80px 0 20px; }
+  .shop {
+    padding: 80px 0 120px; }
+  .programs-content {
+    margin-top: 40px; }
+  .footer {
+    padding-top: 80px; } }
 
 @media (max-width: 604px) {
   .elements-block {
@@ -2552,7 +2608,7 @@ body {
   .footer-list .footer-about .social-icons {
     margin: 25px 0 70px; }
   .trainer .slider-for .slick-dots {
-    top: 113%;
+    top: -50px;
     left: 50%;
     width: 135px;
     height: 20px;
@@ -2610,11 +2666,16 @@ body {
             flex-direction: column; }
   .programs-content .programs-item .img-wrapper {
     height: 200px;
-    max-width: 100%; }
+    width: 100%; }
   .programs-content .programs-item img {
-    height: unset;
+    height: auto;
     width: 100%; }
   .programs-content .programs-item dl {
-    padding: 30px 30px; }
+    padding: 30px 30px;
+    width: 100%; }
   .programs-content .programs-item dl dd {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  .mobile-menu-list {
+    padding-left: 50px; }
+  .mobile-menu {
+    width: 260px; } }

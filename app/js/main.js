@@ -40,9 +40,25 @@ $(document).ready(function() {
  // PageScrollToID Plugin
  	$("a").mPageScroll2id({
  		scrollSpeed: 900,
- 		highlightClass: "is-active",
- 		offset: 99
+ 		clickedClass: "is-active",
+ 		offset: 99,
+ 		onComplete:function(){
+ 			$(".mobile-menu").removeClass("is-opened");
+			$(".hidden-page").removeClass("hidden-page-visible");
+ 		}
  	});
+
+// mobile-menu-animation
+
+	$(".hamburger").click(function(){
+		$(".mobile-menu").toggleClass("is-opened");
+		$(".hidden-page").toggleClass("hidden-page-visible");
+	});
+
+	$(".hidden-page").click(function(){
+		$(".mobile-menu").removeClass("is-opened");
+		$(this).removeClass("hidden-page-visible");
+	});
 
 
  // SmoothScroll for websites v1.2.1

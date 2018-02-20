@@ -9,6 +9,8 @@
 
 
 <body>
+
+
 	<!-- header begin -->
 	<header class="header">
 		<div class="container">
@@ -25,6 +27,10 @@
 						<span>YOGA</span>
 					</a>
 				</div>
+
+				<!-- Hamburger icon -->
+				<div class="hamburger"></div>
+				<!-- Hamburger icon -->
 
 				<ul class="right-nav">
 					<li><a href="#blog">Blog</a></li>
@@ -376,6 +382,91 @@
 		</div>
 	</footer>
 	<!-- footer end -->
+
+	<!-- hidden-page overlay -->
+	<div class="hidden-page"></div>
+	<!-- hidden-page overlay -->
+
+	<!-- mobile-menu begin -->
+	<div class="mobile-menu">
+		<ul class="mobile-menu-list">
+			<li><a href="#about">About Us</a></li>
+			<li><a href="#banner">Reservation</a></li>
+			<li><a href="#gallery">Gallery</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#elements">Elements</a></li>
+			<li><a href="#shop">Shop</a></li>
+		</ul>
+	</div>
+	<!-- mobile-menu end -->
+
+	<style>
+		.mobile-menu{
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 300px;
+			height: 100vh;
+			background-color: #fff;
+			z-index: 12000;
+			transform: translateX(100%);
+			transition: all .4s ease-in-out;
+		}
+
+		.is-opened{
+			transform: translateX(0%);
+		}
+
+		.mobile-menu a{
+			color: #555;
+			font-weight: 600;
+			text-decoration: none;
+			font-size: 25px;
+			padding: 20px;
+			display: inline;
+		}
+
+		.mobile-menu a:hover{
+			color: #5b6ceb;
+		}
+
+		.mobile-menu li{
+			list-style-type: none;
+			text-align: left;
+			margin-top: 20px;
+		}
+
+		.mobile-menu-list{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 100px 0 0 65px;
+			height: 100%;
+			overflow: auto;
+		}
+
+		.hidden-page{
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #000;
+			opacity: 0;
+			z-index: 11000;
+			visibility: hidden;
+			transition: all .4s ease-in-out;
+		}
+
+		.hidden-page-visible{
+			visibility: visible;
+			opacity: .5;
+		}
+	</style>
 
 
 
