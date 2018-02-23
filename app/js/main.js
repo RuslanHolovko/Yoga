@@ -12,11 +12,16 @@ $(document).ready(function() {
   });
 
   // hover effects on button
-  $(".cards-button").hover(function(){
-	$(this).parent().find(".cards-price").css({"background-color" : "#2e43e5"});
-  },function(){
-  	$(this).parent().find(".cards-price").css({"background-color" : "#5b6ceb"});
-  });
+  $(".cards-button").on({
+      mouseenter: function () {     
+    	$(this).parent().find(".cards-price").css({"background-color" : "#2e43e5"});
+      
+      },
+      mouseleave: function () {
+      	$(this).parent().find(".cards-price").css({"background-color" : "#5b6ceb"});
+
+      }
+ });
 
   // slick-slider
    $('.slider-for').slick({
@@ -50,16 +55,45 @@ $(document).ready(function() {
 
 // mobile-menu-animation
 
-	$(".hamburger").click(function(){
+	$(".hamburger").on( "click", function(){
 		$(".mobile-menu").toggleClass("is-opened");
 		$(".hidden-page").toggleClass("hidden-page-visible");
 	});
 
-	$(".hidden-page").click(function(){
+	$(".hidden-page").on( "click", function(){
 		$(".mobile-menu").removeClass("is-opened");
 		$(this).removeClass("hidden-page-visible");
 	});
 
+    // window resize function
+    $(window).on("resize", function(){
+        if ($(this).width() < 978-16){
+            $(".header").addClass("is-mobile");
+        }else{
+            $(".header").removeClass("is-mobile");   
+        }
+    });
+
+    if ($(window).width() < 978-16) {
+        $(".header").addClass("is-mobile");
+    }else{
+        $(".header").removeClass("is-mobile");
+    }
+
+    // header appearance and disappearance with scrolling
+
+    var lastScroll = 0;
+
+    $(window).on("scroll", function(){
+        var pageYoffset = $(this).scrollTop();
+
+        if (pageYoffset > lastScroll) {
+            $(".is-mobile").addClass("hide");
+        }else{
+            $(".is-mobile").removeClass("hide");
+        }
+        lastScroll = pageYoffset
+    });
 
  // SmoothScroll for websites v1.2.1
 // Licensed under the terms of the MIT license.
