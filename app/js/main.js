@@ -46,7 +46,6 @@ $(document).ready(function() {
  	$("a").mPageScroll2id({
  		scrollSpeed: 900,
  		clickedClass: "is-active",
- 		offset: 99,
  		onComplete:function(){
  			$(".mobile-menu").removeClass("is-opened");
 			$(".hidden-page").removeClass("hidden-page-visible");
